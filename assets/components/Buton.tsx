@@ -1,31 +1,31 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, GestureResponderEvent } from 'react-native';
 
 interface ButonProps {
-  text: string;
-  onClick: () => void;
+    title: string;
+    onPress: (event: GestureResponderEvent) => void;
 }
 
-const Buton: React.FC<ButonProps> = ({ text, onClick }) => {
-  return (
-    <TouchableOpacity style={styles.button} onPress={onClick}>
-      <Text style={styles.buttonText}>{text}</Text>
-    </TouchableOpacity>
-  );
-};
+export default function Buton({ title, onPress }: ButonProps) {
+    return (
+        <TouchableOpacity style={styles.button} onPress={onPress}>
+            <Text style={styles.buttonText}>{title}</Text>
+        </TouchableOpacity>
+    );
+}
 
 const styles = StyleSheet.create({
-  button: {
-    backgroundColor: '#E8B589',
-    padding: 10,
-    borderRadius: 5,
-    marginVertical: 5,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-    textAlign: 'center',
-  },
+    button: {
+        backgroundColor: '#E8B589',
+        padding: 10,
+        borderRadius: 5,
+        alignItems: 'center',
+        marginVertical: 10,
+        width:'80%',
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: 'bold',
+    },
 });
-
-export default Buton;
