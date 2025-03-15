@@ -15,7 +15,7 @@ Esta aplicación es un proyecto base que muestra un mensaje de bienvenida y un c
 
 ## 📂 Estructura del Proyecto
 
-##   Paleta de colores
+## 🎨 Paleta de colores
 - #E8B589 – Beige anaranjado
 - #E9DCDB – Rosa claro
 - #BC7C7A – Rojo apagado
